@@ -3,7 +3,8 @@
 /*
 * 4-puts
 *
-* Description: simple program all done in the main function. Prints a string using puts()
+* Description: simple program all done in the main function.
+* Prints a string using puts()
 */
 
 /**
