@@ -17,12 +17,19 @@
 
 int main(void)
 {
-	char hex;
+	char n = 48;
+	char c = 97;
 
-	while (hex < 16)
+	while (n <= 57)
 	{
-		putchar(hex);
-		hex++;
+		putchar(n);
+		n++;
+	}
+
+	while (c <= 102)
+	{
+		putchar(c);
+		c++;
 	}
 
 	putchar('\n');
