@@ -31,21 +31,20 @@ int main(void)
 		{
 			putchar(n);
 			putchar(l);
+
 			if (n != 57 || l != 57)
 			{
 				putchar(',');
 				putchar(' ');
 			}
-
+			
 			l++;
 			counter++;
-
 		}
 
 		counter = 0;
 		n++;
 		l = ZERO;
-
 	}
 
 	putchar('\n');
