@@ -1,15 +1,38 @@
 #include <stdio.h>
 
+/*
+ * 9-print_comb.c
+ *
+ * Description: This programs prints
+ * integres from 0-9 with a ',' and space
+ * in-between each integer.
+ *
+ */
+
+/**
+ * main - the main program is here.
+ * @void: does not take any arguments
+ *
+ * Return: 0
+ */
+
 int main(void)
 {
-	int c = 48;
-	int cc = c + '0';
+	char n = 48;
 
-	while (c < 57)
+	while (n <= 57)
 	{
-		putchar(c);
-	}	
+		putchar(n);
+		if (n != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		n++;
+	}
 
+	putchar('\n');
 
 	return (0);
+
 }
