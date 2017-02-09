@@ -17,12 +17,12 @@
 
 int main(void)
 {
-	int base_10 = 0;
+	int c = 48;
 
-	while (base_10 < 10)
+	while (c <= 57)
 	{
-		putchar(base_10);
-		base_10++;
+		putchar(c);
+		c++;
 	}
 
 	putchar('\n');
