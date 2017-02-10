@@ -34,14 +34,14 @@ int main(void)
 		while (counter <= second_counter)
 		{
 			putchar(n);
-			putchar(l+third_counter);
+			putchar(l + third_counter);
 
 			if (n != 56 && l != 57)
 			{
 				putchar(',');
 				putchar(' ');
 			}
-			
+
 			l++;
 			counter++;
 		}
