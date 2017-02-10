@@ -1,8 +1,10 @@
 /*
- * 10-print_comb2.c
+ * 11-print_comb3.c
  *
  * Description:
- * This program prints all integers between 00 and 99.
+ * This program prints all integers between 01 and 99
+ * except for digits that are repeated.
+ * 01 and 10 are considered repeats
  * All integers printed are double digits. If the integer
  * is normally a single digit, IE: 1, a zero is added to the
  * front.
