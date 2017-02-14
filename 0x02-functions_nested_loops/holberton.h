@@ -37,3 +37,9 @@ void times_table(void);
 
 /* returns the sum of 2 integers */
 int add(int, int);
+
+/* prints n to 98 */
+void print_to_98(int n);
+
+/* prints n time table */
+void print_times_table(int n);

@@ -10,7 +10,7 @@ int main(void)
 {
 	int i = 0;
 
-	char s[] = "Holberton";
+	char s[10] = "Holberton";
 
 	for (i = 0; i <= 9; i++)
 	{
