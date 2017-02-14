@@ -1,37 +1,28 @@
+#include <stdio.h>
 #include "holberton.h"
+
+/**
+ * print_to_98 - prints all numbers from n to 98
+ * @n: number to start count from
+ *
+ * Return: 0
+ */
 
 void print_to_98(int n)
 {
-	int i;
-	int j;
-	if (n < 98)
+	if (n <= 98)
 	{
-	for (i = 0; i <= n; i++)
-	{
-		if(i >= 10)
+		for ( ; n < 98; n++)
 		{
-			_putchar(i / 10 + '0');
-			_putchar(i % 10 + '0');
-		}
-		else
-		{
-		_putchar(i + '0');
+			printf("%d, ", n);
 		}
 	}
-		_putchar('\n');
-	}
-	else if (n > 98)
+	else
 	{
-		for (j = 0; j >= 98; j--)
+		for ( ; n > 98; n--)
 		{
-			if (j >= 10)
-			{
-				_putchar(j / 10 + '0');
-				_putchar(j % 10 + '0');
-			}
+			printf("%d, ", n);
 		}
 	}
-
-
-
+	printf("%d\n", n);
 }
