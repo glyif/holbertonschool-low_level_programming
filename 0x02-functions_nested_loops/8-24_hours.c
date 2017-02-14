@@ -1,10 +1,16 @@
 #include "holberton.h"
+/**
+ * jack_bauer - prints all time
+ * @void: no arguments
+ *
+ * Return: 0
+ */
 
 void jack_bauer(void)
 {
 	int i, j, k, n;
 
-	
+
 	for (i = 0; i <= 2; i++)
 	{
 		for (j = 0; j <= 9; j++)

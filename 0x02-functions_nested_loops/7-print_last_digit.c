@@ -2,8 +2,7 @@
 
 /**
  * print_last_digit - prints last digit
- * @int: digit
- *
+ * @a: integer
  * Return: last digit
  */
 
@@ -14,7 +13,7 @@ int print_last_digit(int a)
 
 	if (a < 0)
 	{
-		result = (a * - 1) % 10;
+		result = (a * -1) % 10;
 	}
 	else
 	{
@@ -23,5 +22,5 @@ int print_last_digit(int a)
 
 	_putchar(result + '0');
 
-	return(result);
+	return (result);
 }
