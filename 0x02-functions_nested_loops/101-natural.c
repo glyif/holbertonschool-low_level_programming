@@ -7,7 +7,7 @@
  * Return: nothing;
  */
 
-int main(void)
+void main(void)
 {
 	int i;
 	int result;
