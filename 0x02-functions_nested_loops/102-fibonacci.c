@@ -13,7 +13,7 @@ int main(void)
 	unsigned long a, b, c;
 
 	a = 1, b = 2;
-	
+
 	while (i < 50)
 	{
 		printf("%lu", a);
@@ -21,13 +21,13 @@ int main(void)
 		{
 			printf(", ");
 		}
-		
+
 		c = b;
 		b = a + b;
 		a = c;
 		i++;
 	}
-	
+
 	putchar('\n');
 	return (0);
 }
