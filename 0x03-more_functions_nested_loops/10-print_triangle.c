@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * print_triangle - prints triangle
+ * @size: size of triangle
+ *
+ * Return: nothing
+ */
+
 void print_triangle(int size)
 {
 	int i;
@@ -22,5 +29,9 @@ void print_triangle(int size)
 
 			_putchar('\n');
 		}
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
