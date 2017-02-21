@@ -27,3 +27,6 @@ void print_array(int *a, int n);
 
 /* strcopy */
 char *_strcpy(char *dest, char *src);
+
+/* rev string */
+void rev_string(char *s);
