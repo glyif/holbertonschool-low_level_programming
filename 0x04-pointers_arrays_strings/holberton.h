@@ -24,3 +24,6 @@ void puts_half(char *str);
 
 /* array */
 void print_array(int *a, int n);
+
+/* strcopy */
+char *_strcpy(char *dest, char *src);
