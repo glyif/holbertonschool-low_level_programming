@@ -6,3 +6,6 @@ char *_strcat(char *dest, char *src);
 
 /* cats two strings with max character */
 char *_strncat(char *dest, char *src, int n);
+
+/* copies string */
+char *_strncpy(char *dest, char *src, int n);
