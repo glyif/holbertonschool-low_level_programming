@@ -22,9 +22,11 @@ char *_strncpy(char *dest, char *src, int n)
 		j++;
 	}
 
-	if (n > i)
+	while (n > i)
+	{
 		dest[i] = '\0';
-
+		i++;
+	}
 
 	return (dest);
 }
