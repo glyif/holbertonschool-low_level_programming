@@ -23,3 +23,6 @@ char *cap_string(char *);
 
 /* leet */
 char *leet(char *);
+
+/* rot13 */
+char *rot13(char *);
