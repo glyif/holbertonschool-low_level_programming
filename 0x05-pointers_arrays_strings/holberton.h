@@ -20,3 +20,6 @@ char *string_toupper(char *);
 
 /* first to caps */
 char *cap_string(char *);
+
+/* leet */
+char *leet(char *);
