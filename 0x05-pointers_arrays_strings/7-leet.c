@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * leet - 1337
+ * @s: string
+ *
+ * Return: string with 1337;
+ */
+
 char *leet(char *s)
 {
 	int i;
@@ -11,12 +18,12 @@ char *leet(char *s)
 	{
 		for (j = 0; from[j] != '\0'; j++)
 		{
-			if(s[i] == from[j])
+			if (s[i] == from[j])
 			{
 				s[i] = to[j];
 			}
 		}
 	}
 
-	return(s);
+	return (s);
 }
