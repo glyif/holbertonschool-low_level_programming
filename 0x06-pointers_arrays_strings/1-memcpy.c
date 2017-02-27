@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _memcpy: n types from src to dest
+ * _memcpy - n types from src to dest
  * @dest: destination of copy
  * @src: source of copy
  * @n: number of times
