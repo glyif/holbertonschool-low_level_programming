@@ -26,9 +26,12 @@ unsigned int _strspn(char *s, char *accept)
 				k++;
 				break;
 			}
+
 			j++;
 		}
-
+		
+		if (accept[j] == '\0')
+			return (k);
 
 		i++;
 
