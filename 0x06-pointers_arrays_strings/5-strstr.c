@@ -18,8 +18,9 @@ char *_strstr(char *haystack, char *needle)
 		char *needlecp = needle;
 		int i;
 
-		for (i = 0; needlecp[i] == haystackcp[i] && needlecp[i] != '\0' && haystackcp[i] != '\0'; i++)
-			;	
+		for (i = 0; needlecp[i] == haystackcp[i]
+				&& needlecp[i] != '\0' && haystackcp[i] != '\0'; i++)
+			;
 
 		if (needlecp[i] == '\0')
 			return (haystackcp);
