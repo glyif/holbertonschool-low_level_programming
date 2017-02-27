@@ -3,14 +3,14 @@
 /**
  * _strspn - gets the length of a prefix substring
  * @s: string
- * @c: string to look for
+ * @accept: string to look for
  *
  * Return: number of occourances
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	
+
 	int i = 0;
 	int j = 0;
 	int k = 0;
@@ -19,7 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		j = 0;
 
-		while(accept[j] != '\0')
+		while (accept[j] != '\0')
 		{
 			if (s[i] == accept[j])
 			{
@@ -29,14 +29,14 @@ unsigned int _strspn(char *s, char *accept)
 
 			j++;
 		}
-		
+
 		if (accept[j] == '\0')
 			return (k);
 
 		i++;
 
 	}
-	
+
 	return (k);
 
 }
