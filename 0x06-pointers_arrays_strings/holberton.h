@@ -12,3 +12,6 @@ char *_strchr(char *s, char c);
 
 /* strscp */
 unsigned int _strspn(char *s, char *accept);
+
+/* strpbrk */
+char *_strpbrk(char *s, char *accept);
