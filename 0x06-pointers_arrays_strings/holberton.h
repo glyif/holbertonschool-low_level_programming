@@ -21,3 +21,9 @@ char *_strstr(char *haystack, char *needle);
 
 /* chess */
 void print_chessboard(char (*a)[8]);
+
+/* diaganoal sum */
+void print_diagsums(int *a, int size);
+
+/* double point */
+void set_string(char **s, char *to);
