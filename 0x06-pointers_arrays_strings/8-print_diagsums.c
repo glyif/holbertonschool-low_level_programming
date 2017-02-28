@@ -19,14 +19,14 @@ void print_diagsums(int *a, int size)
 	{
 
 		total = total + *(a + i);
-	
+
 	}
 	printf("%d, ", total);
 
 	a = a - size;
-	
-	total= 0;
-	
+
+	total = 0;
+
 	for (i = 0; i < size; i++, a = a - size)
 	{
 		total = total + *(a + i);
