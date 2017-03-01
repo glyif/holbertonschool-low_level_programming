@@ -4,7 +4,7 @@
  * _strlen_recursion - length of string
  * @s: string
  *
- * Returns: nothing
+ * Return: integer thats the number
  */
 
 int _strlen_recursion(char *s)
