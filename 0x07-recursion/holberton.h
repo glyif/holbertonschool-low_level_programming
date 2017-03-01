@@ -9,3 +9,6 @@ void _print_rev_recursion(char *s);
 
 /* returns stren len */
 int _strlen_recursion(char *s);
+
+/* factorial */
+int factorial(int n);
