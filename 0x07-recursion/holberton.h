@@ -1,0 +1,11 @@
+/* _putchar */
+int _putchar(char c);
+
+/* puts */
+void _puts_recursion(char *s);
+
+/* print_rev */
+void _print_rev_recursion(char *s);
+
+/* returns stren len */
+int _strlen_recursion(char *s);
