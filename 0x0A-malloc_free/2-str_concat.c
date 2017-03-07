@@ -46,7 +46,7 @@ char *str_concat(char *s1, char *s2)
 
 	total = c1 + c2;
 
-	ar = malloc(0);
+	ar = malloc(total);
 
 	for (i = 0; i < c1; i++)
 		ar[i] = s1[i];
