@@ -13,13 +13,13 @@ int _strlen(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		;
-	
+
 	return (i);
 }
 
 /**
  * total_len - length of all args
- * @arg
+ * @arg: array of arguments
  *
  * Return: length
  */
@@ -31,8 +31,8 @@ int total_len(char **arg)
 
 	for (i = 0; arg[i] != NULL; i++)
 		l = l + _strlen(arg[i]);
-	
-	return l;
+
+	return (l);
 }
 
 /**
@@ -84,11 +84,11 @@ void copy_args(char **from, char *to)
 
 char *argstostr(int ac, char **av)
 {
-	char *ar ;
+	char *ar;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	
+
 	ar = malloc(ac + 1 + total_len(av));
 
 	copy_args(av, ar);
