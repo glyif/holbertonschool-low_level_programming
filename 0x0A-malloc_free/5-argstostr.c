@@ -1,5 +1,78 @@
-#include <stdio.h>
 #include <stdlib.h>
+
+/**
+ * _strlen - length of string
+ * @str: string
+ *
+ * Return: length of string
+ */
+
+int _strlen(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	
+	return (i);
+}
+
+/**
+ * total_len - length of all args
+ * @arg
+ *
+ * Return: length
+ */
+
+int total_len(char **arg)
+{
+	int i;
+	int l;
+
+	for (i = 0; arg[i] != NULL; i++)
+		l = l + _strlen(arg[i]);
+	
+	return l;
+}
+
+/**
+ * copy_arg - copies 1 arg
+ * @from: copying from
+ * @to: coptying to
+ *
+ * Return: nothing
+ */
+
+void copy_arg(char *from, char *to)
+{
+	int i;
+
+	for (i = 0; from[i] != '\0'; i++)
+		to[i] = from[i];
+}
+
+/**
+ * copy_args - concats into 1 string
+ * @from: copying to
+ * @to: copying from
+ *
+ * Return: nothing
+ */
+
+void copy_args(char **from, char *to)
+{
+	int i;
+	int j;
+
+	for (i = 0, j = 0; from[i] != '\0'; i++, j++)
+	{
+		copy_arg(from[i], to + j);
+		j = j + _strlen(from[i]);
+		to[j] = '\n';
+	}
+
+	to[j] = '\0';
+}
 
 /**
  * argstostr - concats all arguments
@@ -11,35 +84,16 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *ar;
-	int i, j, k, l;
+	char *ar ;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
+	
+	ar = malloc(ac + 1 + total_len(av));
 
-	for (i = 0, l = 0, k = 0; k < ac; i++, l++)
-	{
-		if (av[k][i]  == '\0')
-			k++;
-	}
-
-	l++;
-
-	ar = malloc(l * sizeof(char));
-
-	if (ar == NULL)
-		return (NULL);
-
-	for (i = 0, j = 0, k = 0; k < ac; i++, j++)
-	{
-		ar[j] = av[k][i];
-		if (av[k][i] == '\0')
-		{
-			ar[j] = '\n';
-			k++;
-			i = -1;
-		}
-	}
+	copy_args(av, ar);
 
 	return (ar);
+
 }
+
