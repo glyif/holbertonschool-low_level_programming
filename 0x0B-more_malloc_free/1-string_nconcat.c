@@ -43,10 +43,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = empty;
 
-	if (n > len2)
-		ar = malloc((len1 + len2) * sizeof(*ar));
-	else
-		ar = malloc((len1 + n + 1) * sizeof(*ar));
+	if (n >= len2)
+		n = len2;
+
+	ar = malloc((len1 * sizeof(char)) + n + 1);
 
 	if (ar == NULL)
 		return (NULL);
