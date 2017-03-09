@@ -55,8 +55,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i] != '\0'; i++)
 		ar[i] = s1[i];
 
-	for (j = 0; j < n; i++, j++)
+	if (len2 < n)
+	{
+		for (j = 0; s2[j] != '\0'; i++, j++)
 			ar[i] = s2[j];
+	}
+	else
+	{
+		for (j = 0; j < n; i++, j++)
+			ar[i] = s2[j];
+	}
 
 	ar[i] = '\0';
 
