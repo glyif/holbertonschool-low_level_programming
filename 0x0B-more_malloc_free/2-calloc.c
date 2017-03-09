@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * calloc - allocate memory
+ * _calloc - allocate memory
  * @nmemb: number of arrays
  * @size: size each
  *
@@ -17,6 +17,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	ar = calloc(nmemb, size);
-	
-	return(ar);
+
+	if (ar == NULL)
+		return (NULL);
+
+	return (ar);
 }
