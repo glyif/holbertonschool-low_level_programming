@@ -35,19 +35,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	empty = "";
 
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
-
 	if (s1 == NULL)
 		s1 = empty;
 
 	if (s2 == NULL)
 		s2 = empty;
 
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+
 	if (n >= len2)
 		n = len2;
 
-	ar = malloc((len1 * sizeof(char)) + n + 1);
+	ar = malloc(len1 + n + 1);
 
 	if (ar == NULL)
 		return (NULL);
