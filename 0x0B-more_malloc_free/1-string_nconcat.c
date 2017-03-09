@@ -34,6 +34,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j, len1, len2;
 	empty = "";
 
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+
 	if (s1 == NULL)
 		s1 = empty;
 
@@ -41,9 +44,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = empty;
 
 	if (n > len2)
-		s = malloc((len1 + len2) * sizeof(*s));
+		ar = malloc((len1 + len2) * sizeof(*ar));
 	else
-		s = malloc((len1 + n + 1) * sizeof(*s));
+		ar = malloc((len1 + n + 1) * sizeof(*ar));
 
 	if (ar == NULL)
 		return (NULL);
