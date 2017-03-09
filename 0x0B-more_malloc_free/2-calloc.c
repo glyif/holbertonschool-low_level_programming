@@ -11,15 +11,22 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ar;
+	void *ar;
+	int *cpy;
+	unsigned int i;
 
-	if (nmemb <= 0 || size <= 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	ar = calloc(nmemb, size);
-
+	ar = malloc(nmemb * size);
+	
 	if (ar == NULL)
 		return (NULL);
+
+	cpy = ar;
+
+	for (i = 0 ; i < nmemb; i++)
+		*(cpy + (i * size)) = 0;
 
 	return (ar);
 }
