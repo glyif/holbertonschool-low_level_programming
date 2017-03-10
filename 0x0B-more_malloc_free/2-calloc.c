@@ -12,7 +12,6 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ar;
-	int *cpy;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
@@ -25,8 +24,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	cpy = ar;
 
-	for (i = 0 ; i < nmemb; i++)
-		cpy[i * size] = 0;
+	for (i = 0 ; i < nmemb * size; i++)
+		ar[i] = 0;
 
 	return (ar);
 }
