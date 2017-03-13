@@ -2,6 +2,24 @@
 #include "dog.h"
 
 /**
+ * _strcpy - string copy
+ * @t: to
+ * @f: from
+ *
+ * Return: pointer to new string
+ */
+
+char *_strcpy(char *to, char *from)
+{
+	int i;
+	
+	for (i = 0; from[i] != '\0'; i++)
+		to[i] = from[i];
+
+	return(to);
+}
+
+/**
  * new_dog - new dog
  * @name: name
  * @age: age
@@ -12,7 +30,7 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int i, name_len, owner_len;
+	unsigned int name_len, owner_len;
 	dog_t *new_dog;
 
 	for (name_len = 0; name[name_len] != '\0'; name_len++)
@@ -42,12 +60,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-
+	
+	_strcpy(new_dog->name, name);
+	
+	_strcpy(new_dog->owner, owner);
+	/*
 	for (i = 0; name[i] != '\0'; i++)
 		new_dog->name[i] = name[i];
 
 	for (i = 0; owner[i] != '\0'; i++)
 		new_dog->owner[i] = owner[i];
+	*/
 
 	new_dog->age = age;
 
