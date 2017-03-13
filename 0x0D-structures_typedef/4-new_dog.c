@@ -20,27 +20,50 @@ char *_strcpy(char *to, char *from)
 }
 
 /**
- * new_dog - new dog
- * @name: name
- * @age: age
- * @owner: owner
+ * _strlen - string length
+ * @s: string
  *
- * Return: pointer to new dog
+ * Return: string length
  */
+
+int _strlen(char *s)
+{
+	int i;
+
+	if (s == NULL)
+		return 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+
+	return (i);
+}
+
+/**
+ * malloc_check
+ * @ar: pointer to allocated memory
+ *
+ * Return: pointer or NULL;
+ */
+
+void *malloc_check(void *p)
+{
+	if (p == NULL)
+		return (NULL);
+	else
+		return (p);
+}
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	unsigned int name_len, owner_len;
 	dog_t *new_dog;
 
-	for (name_len = 0; name[name_len] != '\0'; name_len++)
-		;
-
-	for (owner_len = 0; owner[owner_len] != '\0'; owner_len++)
-		;
+	name_len = _strlen(name);
+	owner_len = _strlen(owner);
 
 	new_dog = malloc(sizeof(dog_t));
-
+	
 	if (new_dog == NULL)
 		return (NULL);
 
@@ -64,13 +87,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	_strcpy(new_dog->name, name);
 	
 	_strcpy(new_dog->owner, owner);
-	/*
-	for (i = 0; name[i] != '\0'; i++)
-		new_dog->name[i] = name[i];
-
-	for (i = 0; owner[i] != '\0'; i++)
-		new_dog->owner[i] = owner[i];
-	*/
 
 	new_dog->age = age;
 
