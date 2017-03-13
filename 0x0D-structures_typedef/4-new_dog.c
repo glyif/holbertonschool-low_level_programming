@@ -3,8 +3,8 @@
 
 /**
  * _strcpy - string copy
- * @t: to
- * @f: from
+ * @to: to
+ * @from: from
  *
  * Return: pointer to new string
  */
@@ -12,11 +12,11 @@
 char *_strcpy(char *to, char *from)
 {
 	int i;
-	
+
 	for (i = 0; from[i] != '\0'; i++)
 		to[i] = from[i];
 
-	return(to);
+	return (to);
 }
 
 /**
@@ -31,7 +31,7 @@ int _strlen(char *s)
 	int i;
 
 	if (s == NULL)
-		return 0;
+		return (0);
 
 	for (i = 0; s[i] != '\0'; i++)
 		;
@@ -40,19 +40,13 @@ int _strlen(char *s)
 }
 
 /**
- * malloc_check
- * @ar: pointer to allocated memory
+ * new_dog - new dog
+ * @name: name
+ * @age: age
+ * @owner: owner
  *
- * Return: pointer or NULL;
+ * Return: pointer to new dog or NULL
  */
-
-void *malloc_check(void *p)
-{
-	if (p == NULL)
-		return (NULL);
-	else
-		return (p);
-}
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -63,7 +57,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	owner_len = _strlen(owner);
 
 	new_dog = malloc(sizeof(dog_t));
-	
+
 	if (new_dog == NULL)
 		return (NULL);
 
@@ -83,9 +77,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	
+
 	_strcpy(new_dog->name, name);
-	
+
 	_strcpy(new_dog->owner, owner);
 
 	new_dog->age = age;
