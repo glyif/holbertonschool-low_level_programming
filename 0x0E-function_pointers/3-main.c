@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 
 	calc = (get_op_func(argv[2]));
 	
-	if (calc == NULL || argv[2] == NULL)
+	if (calc == NULL || argv[2][1] == '\0')
 	{
 		printf("Error\n");
 		return (0);
