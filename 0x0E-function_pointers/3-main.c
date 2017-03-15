@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (0);
+		exit (98);
 	}
 
 	calc = (get_op_func(argv[2]));
@@ -27,7 +27,13 @@ int main(int argc, char **argv)
 	if (calc == NULL)
 	{
 		printf("Error\n");
-		return (0);
+		exit (99);
+	}
+
+	if ((*argv[2] == '/' || *argv[2] == '%') && (atoi(argv[3]) == 0))
+	{
+		printf("Error\n");
+		exit(100);
 	}
 
 	a = atoi(argv[1]);
