@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_string - print all arguments
+ * print_strings - print all arguments
  * @separator: separator
  * @n: number of string
  * @...: variadic number of strings
@@ -13,7 +13,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	va_list(ap);
+	va_list ap;
 
 	char *temp;
 
@@ -22,10 +22,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		temp = va_arg(ap, char *);
-		
+
 		if (temp == NULL)
 			printf("(nil)");
-		else	
+		else
 			printf("%s", temp);
 
 		if (i < n - 1 && separator != NULL)
