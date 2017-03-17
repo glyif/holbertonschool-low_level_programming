@@ -12,8 +12,8 @@ double average(int num,...)
 ```
 In this example you see that the function `average` takes in an integer `num` and then an ellipsis `...` and returns a double.
 
-`@num` will most likely be the number of numbers the function will be taking in.
-`@...` will be `num` number of arguments
+- `@num` will most likely be the number of numbers the function will be taking in.
+- `@...` will be `num` number of arguments
 
 
 ## File Breakdown
