@@ -24,18 +24,6 @@ int main(int argc, char **argv)
 
 	calc = (get_op_func(argv[2]));
 
-	if (calc == NULL || argv[2] == NULL || *argv[2] == '\0')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	if ((*argv[2] == '/' || *argv[2] == '%') && (atoi(argv[3]) == 0))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
