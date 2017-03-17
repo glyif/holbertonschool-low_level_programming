@@ -69,5 +69,4 @@ gcc -Wall -pedantic -Werror -Wextra main/0-main.c 0-sum_them_all.c -o sum_them_a
 For this command you will need to be in the `root` project folder, not the `main` folder. As you'll be compiling the `main/0-main.c` file in the `main` folder and the `0-sum_them_all.c` file in the current directory.
 
 ## TODO
-- [ ] Get [@Julien Barbier] (https://github.com/jbarbier)to say I did a good job ;)
-
+- [ ] Get [@Julien Barbier](https://github.com/jbarbier) to say I did a good job ;)
