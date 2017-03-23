@@ -8,7 +8,6 @@ A linked lists is a collection of data elements that has a pointer pointing to t
 
 For this assignment, the linked list stuct that will be used is this:
 ```c
-/**
 typedef struct list_s
 {
     char *str;
