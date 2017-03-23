@@ -1,4 +1,8 @@
 #include "lists.h"
+/**
+ * free_list - frees linked list
+ * @head: head of linked list
+ */
 
 void free_list(list_t *head)
 {
@@ -9,5 +13,5 @@ void free_list(list_t *head)
 		free(head->str);
 		free(head);
 	}
-	
+
 }
