@@ -24,6 +24,18 @@ typedef struct list_s
 ### lists.h 
 This is a header file containing all of the prototypes necessary for testing with a main function.
 
+### 0-print_list.c
+This file contains a function called `print_list`
+
+This program prints all `str` elements in the linked list then returns the number of nodes in the list.
+
+```c
+size_t print_list(const list_t *h);
+```
+
+- `@h` is the pointer to the start of the linked list.
+
+
 
 ## Using
 There's folder name main that has all of the files that test out these functions. The main file names correspond with the number in front of the name of the function files.
