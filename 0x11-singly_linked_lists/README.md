@@ -34,7 +34,16 @@ size_t print_list(const list_t *h);
 
 - `@h` is the pointer to the start of the linked list.
 
+### 1-list_len.c
+This file contains a function called `list_len`
 
+This program returns the length of the linked list `@h`.
+
+```c
+size_t list_len(const list_t *h);
+```
+
+- `@h` is the pointer to the start of the linked list.
 
 ## Using
 There's folder name main that has all of the files that test out these functions. The main file names correspond with the number in front of the name of the function files.
