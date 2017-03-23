@@ -55,7 +55,19 @@ list_t *add_node(list_t **head, const char *str);
 This program takes in the address of the head node and a const string and creates a new node that's head and inputs `str` into the `str` field.
 
 - `@head` is the address of the head passed in.
-- `@str` is the `const` string that gets coppied into the new head node
+- `@str` is the `const` string that gets copied into the new head node
+
+### 3-add_node_end.c
+This file contains a function called add_node_end.
+
+This program takes in a head node and appends a node to the end of the list. If head is the null, make the the node the head.
+
+```c
+list_t *add_node_end(list_t **head, const char *str);
+```
+
+- `@head` is the head node of a linked list that you want to append a node at the end of
+- `@str` is the `const` string that gest copied into the new end node.
 
 ## Using
 There's folder name main that has all of the files that test out these functions. The main file names correspond with the number in front of the name of the function files.
