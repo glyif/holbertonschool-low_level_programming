@@ -20,7 +20,7 @@ size_t _strlen_c(const char *s)
 
 /**
  * add_node_end - adds node to the end of the list
- * @head: the node to put a node after
+ * @head: the head node
  * @str: string to copy into new node
  *
  * Return: new node at the end
