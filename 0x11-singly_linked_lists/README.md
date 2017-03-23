@@ -45,6 +45,18 @@ size_t list_len(const list_t *h);
 
 - `@h` is the pointer to the start of the linked list.
 
+### 2-add_node.c
+This file contains a function called `add_node`.
+
+```c
+list_t *add_node(list_t **head, const char *str);
+```
+
+This program takes in the address of the head node and a const string and creates a new node that's head and inputs `str` into the `str` field.
+
+- `@head` is the address of the head passed in.
+- `@str` is the `const` string that gets coppied into the new head node
+
 ## Using
 There's folder name main that has all of the files that test out these functions. The main file names correspond with the number in front of the name of the function files.
 
