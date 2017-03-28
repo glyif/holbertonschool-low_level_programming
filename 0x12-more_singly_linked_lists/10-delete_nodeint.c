@@ -11,7 +11,7 @@
 unsigned int list_len(listint_t *head)
 {
 	unsigned int i;
-	
+
 	for (i = 0; head != NULL; i++)
 		head = head->next;
 
@@ -38,7 +38,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (*head == NULL || index > len)
 		return (-1);
-	
+
 	if (index == 0)
 	{
 		*head = (*head)->next;
