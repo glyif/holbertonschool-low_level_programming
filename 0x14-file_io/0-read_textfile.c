@@ -32,7 +32,7 @@ size_t read_textfile(const char *filename, size_t letters)
 
 	rd = read(file, to_print, letters);
 
-	if (rd < 0)
+	if (rd <= 0)
 	{
 		free(to_print);
 		return (0);
