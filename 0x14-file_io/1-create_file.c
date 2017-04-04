@@ -12,7 +12,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int file, size;
 	size_t wt;
-	
+
 	if (filename == NULL)
 		return (-1);
 
@@ -32,10 +32,10 @@ int create_file(const char *filename, char *text_content)
 
 	wt = write(file, text_content, size);
 
-	if (wt < 0)
+	if (wt <= 0)
 	{
 		close(file);
-		return(-1);
+		return (-1);
 	}
 
 	if (close(file) < 0)
