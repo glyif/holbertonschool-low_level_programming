@@ -34,6 +34,11 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	wt = write(file, text_content, size);
 
+	if (wt < 0)
+	{
+		close(file);
+		return (-1);
+	}
 	close(file);
 	return (1);
 
