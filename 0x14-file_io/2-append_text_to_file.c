@@ -30,8 +30,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	for (size = 0; text_content[size] != '\0'; size++)
 		;
 
-	size++;
-
 	wt = write(file, text_content, size);
 
 	if (wt < 0)
