@@ -12,6 +12,7 @@ void from_to(copy_struct *cpy)
 
 	while (cpy->rd > 0)
 	{
+		printf("here")
 		cpy->rd = read(cpy->from_file, cpy->buffer, 1204);
 		if (cpy->rd < 0)
 		{
@@ -128,5 +129,6 @@ int main(int argc, char **argv)
 
 	file_copy(cp_command);
 
+	free(cp_command);
 	return (0);
 }
