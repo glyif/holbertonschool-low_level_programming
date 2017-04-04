@@ -31,15 +31,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(to_print);
 		return (0);
 	}
-	wt = write(STDOUT_FILENO, to_print, letters);
-
+	if (rd > 0)
+		wt = write(STDOUT_FILENO, to_print, letters);
 	if (wt < rd)
 	{
 		free(to_print);
 		return (0);
 	}
-
-	if (close(file) < 0)
+	wt = close(file);
+	if (wt < 0)
 	{
 		free(to_print);
 		return (0);
