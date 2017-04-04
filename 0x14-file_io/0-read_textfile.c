@@ -8,7 +8,7 @@
  * Return: total number of chars printed.
  */
 
-size_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters);
 {
 	char *to_print;
 	size_t rd, wt;
@@ -32,11 +32,13 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	wt = write(STDIN_FILENO, to_print, letters);
+	
 	if (wt < rd)
 	{
 		free(to_print);
 		return (0);
 	}
+
 	if (close(file) < 0)
 	{
 		free(to_print);
