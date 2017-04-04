@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * from_to - reads from from and writes to copy stops when rd < 0
@@ -12,7 +11,6 @@ void from_to(copy_struct *cpy)
 
 	while (cpy->rd > 0)
 	{
-		printf("here")
 		cpy->rd = read(cpy->from_file, cpy->buffer, 1204);
 		if (cpy->rd < 0)
 		{
