@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * from_to - reads from from and writes to copy stops when rd < 0
