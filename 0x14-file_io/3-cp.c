@@ -128,5 +128,6 @@ int main(int argc, char **argv)
 
 	file_copy(cp_command);
 
+	free(cp_command);
 	return (0);
 }
