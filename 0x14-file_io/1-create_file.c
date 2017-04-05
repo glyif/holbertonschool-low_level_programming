@@ -16,12 +16,9 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	for (size = 0; text_content[size] != '\0'; size++)
-		;
-
 	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 
-	if (file < 0)
+	if (file == -1)
 		return (-1);
 
 	if (text_content == NULL)
@@ -29,10 +26,12 @@ int create_file(const char *filename, char *text_content)
 		close(file);
 		return (1);
 	}
+	for (size = 0; text_content[size] != '\0'; size++)
+		;
 
 	wt = write(file, text_content, size);
 
-	if (wt < 0)
+	if (wt == -1)
 	{
 		close(file);
 		return (-1);
