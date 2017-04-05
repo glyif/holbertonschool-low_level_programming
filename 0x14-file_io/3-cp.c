@@ -10,7 +10,7 @@ void from_to(copy_struct *cpy)
 {
 	cpy->rd = 1;
 
-	while (cpy->rd > 0)
+	while (cpy->rd)
 	{
 		cpy->rd = read(cpy->from_file, cpy->buffer, 1204);
 		if (cpy->rd < 0)
