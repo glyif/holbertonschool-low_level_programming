@@ -11,7 +11,7 @@ typedef struct copy_struct
 	ssize_t wt;
 	int from_file;
 	int to_file;
-	char buffer[1204];
+	char *buffer;
 } copy_struct;
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);

@@ -31,7 +31,6 @@ void from_to(copy_struct *cpy)
 /**
  * file_copy - copies one file to another name
  * @cpy: struct
- *
  */
 
 void file_copy(copy_struct *cpy)
@@ -87,6 +86,10 @@ void init_struct(copy_struct *cpy, char **argv)
 
 	cpy->from = argv[1];
 	cpy->to = argv[2];
+	cpy->buffer = malloc(sizeof(char) * 1204);
+
+	if (cpy->buffer == NULL)
+		exit(-1);
 }
 
 
@@ -97,6 +100,7 @@ void init_struct(copy_struct *cpy, char **argv)
  *
  * Return: 0
  */
+
 int main(int argc, char **argv)
 {
 	copy_struct *cp_command;
