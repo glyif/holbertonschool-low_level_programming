@@ -21,6 +21,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 int hash_insert(hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *new;
+
+	if (head == NULL || key == NULL || value == NULL)
+		return (0);
 	
 	new = _calloc(1, sizeof(hash_node_t));
 
