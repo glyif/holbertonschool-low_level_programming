@@ -2,21 +2,22 @@
 
 /**
  * swap - swaps two integers
- * 
+ *
  * @curr: current pointer
  * @next: next pointer
  */
 void swap(int *curr, int *next)
 {
-    int tmp;
+	int tmp;
+
 	tmp = *curr;
-    *curr = *next;
-    *next = tmp;
+	*curr = *next;
+	*next = tmp;
 }
 
 /**
  * bubble_sort - bubble sorting algorithm (no optimization)
- * 
+ *
  * @array: array of integers
  * @size: size of the array
  */
