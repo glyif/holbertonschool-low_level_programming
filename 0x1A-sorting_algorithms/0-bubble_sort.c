@@ -16,7 +16,7 @@ void swap(int *curr, int *next)
 }
 
 /**
- * bubble_sort - bubble sorting algorithm (no optimization)
+ * bubble_sort - bubble sorting algorithm (optimized)
  *
  * @array: array of integers
  * @size: size of the array
@@ -25,6 +25,7 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t i;
 	size_t j;
+	int flag;
 	int *curr;
 	int *next;
 
@@ -32,15 +33,22 @@ void bubble_sort(int *array, size_t size)
 
 	while (i < size - 1)
 	{
+		flag = 0;
 		j = 0;
 		while (j < size - i - 1)
 		{
+			flag = 1;
 			curr = &array[j];
 			next = &array[j + 1];
 
 			if (*curr > *next)
 				swap(curr, next);
 			j++;
+		}
+
+		if (flag == 0)
+		{
+			return;
 		}
 		print_array(array, size);
 		i++;
