@@ -22,7 +22,7 @@ listint_t *find_head(listint_t *p)
  */
 void insertion_sort_list(listint_t **list)
 {
-  	listint_t *wait, *tmp,*tmp2;
+	listint_t *wait, *tmp, *tmp2;
 
 	if (list == NULL)
 		return;
