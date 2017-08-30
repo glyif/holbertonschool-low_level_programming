@@ -1,0 +1,10 @@
+#include "search_algos.h"
+
+/**
+ * jump_search - jump search
+ * @array: array of int
+ * @size: size of array
+ * @value: value to find
+ *
+ * Return: index or -1
+ */
